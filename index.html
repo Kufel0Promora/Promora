@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Promora - Serwer Reklamowy</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Ikona w zakładce przeglądarki -->
+    <link rel="icon" href="images/logo.png" type="image/png" />
+</head>
+<body>
+
+    <!-- ====== REKLAMA GÓRNA (FIXED) ====== -->
+    <div id="reklama-gora" class="reklama-top">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="images/baner.png" alt="Reklama górna" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-gora')">✕</button>
+    </div>
+
+    <!-- ====== REKLAMA LEWA (FIXED) ====== -->
+    <div id="reklama-lewa" class="reklama-side left">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="images/baner1.png" alt="Reklama lewa" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-lewa')">✕</button>
+    </div>
+
+    <!-- ====== REKLAMA PRAWA (FIXED) ====== -->
+    <div id="reklama-prawa" class="reklama-side right">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="images/baner2.png" alt="Reklama prawa" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-prawa')">✕</button>
+    </div>
+
+    <!-- ====== GŁÓWNY KONTENER ====== -->
+    <div class="container">
+
+        <!-- ====== NAGŁÓWEK ====== -->
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Promora" />
+                <div class="logo-text">
+                    <h1>Promora</h1>
+                    <span>Serwer Reklamowy</span>
+                </div>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Strona główna</a>
+                <a href="podstrony/o-nas.html">O nas</a>
+                <a href="podstrony/regulamin.html">Regulamin</a>
+                <a href="podstrony/eventy.html">Eventy</a>
+                <a href="podstrony/faq.html">FAQ</a>
+            </nav>
+            <a href="https://discord.gg/f8qhJQSRA7" target="_blank" class="btn-join">
+                Dołącz do serwera ➜
+            </a>
+        </header>
+
+        <!-- ====== GŁÓWNA TREŚĆ ====== -->
+        <main>
+            <!-- Sekcja powitalna -->
+            <section class="hero">
+                <h2>Witaj na <span class="highlight">Promora</span></h2>
+                <p>
+                    Najlepsze miejsce do reklamy Twojego serwera Discord!
+                    Dołącz do naszej społeczności i promuj swój serwer.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://discord.gg/f8qhJQSRA7" target="_blank" class="btn-join-large">
+                        🚀 Dołącz teraz!
+                    </a>
+                    <a href="podstrony/o-nas.html" class="btn-secondary">
+                        Dowiedz się więcej
+                    </a>
+                </div>
+            </section>
+
+            <!-- Statystyki -->
+            <section class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Członków</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Kanałów</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Eventów</span>
+                </div>
+            </section>
+
+            <!-- Co oferujemy -->
+            <section class="features">
+                <h2>Co oferujemy?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📢</div>
+                        <h3>Reklama serwerów</h3>
+                        <p>Dedykowane kanały do promowania Twojego serwera Discord.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Eventy</h3>
+                        <p>Regularne eventy i konkursy dla całej społeczności.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Społeczność</h3>
+                        <p>Poznaj innych adminów i rozwijaj swój serwer razem z nami.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Szybki rozwój</h3>
+                        <p>Pomagamy małym serwerom szybko się rozwijać.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Najnowsze eventy -->
+            <section class="events-preview">
+                <h2>📅 Nadchodzące eventy</h2>
+                <div class="events-list">
+                    <div class="event-item">
+                        <span class="event-date">15.07.2026</span>
+                        <span class="event-name">Konkurs na najlepszy serwer</span>
+                        <span class="event-status upcoming">Już wkrótce</span>
+                    </div>
+                    <div class="event-item">
+                        <span class="event-date">20.07.2026</span>
+                        <span class="event-name">Wieczór gier</span>
+                        <span class="event-status upcoming">Już wkrótce</span>
+                    </div>
+                    <div class="event-item">
+                        <span class="event-date">25.07.2026</span>
+                        <span class="event-name">Meet & Greet z adminami</span>
+                        <span class="event-status upcoming">Już wkrótce</span>
+                    </div>
+                </div>
+                <div class="view-all">
+                    <a href="podstrony/eventy.html">Zobacz wszystkie eventy →</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- ====== STOPKA ====== -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Promora</h4>
+                    <p>Serwer Reklamowy dla każdego</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Linki</h4>
+                    <a href="index.html">Strona główna</a>
+                    <a href="podstrony/o-nas.html">O nas</a>
+                    <a href="podstrony/regulamin.html">Regulamin</a>
+                    <a href="podstrony/faq.html">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>📩 Kontakt przez ticket na Discordzie</p>
+                    <a href="https://discord.gg/f8qhJQSRA7" target="_blank" class="btn-join-small">
+                        Dołącz do serwera
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Promora. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ====== REKLAMA DOLNA (FIXED) ====== -->
+    <div id="reklama-dol" class="reklama-bottom">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="images/baner.png" alt="Reklama dolna" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-dol')">✕</button>
+    </div>
+
+    <!-- ====== SKRYPTY ====== -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

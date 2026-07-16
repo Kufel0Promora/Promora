@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Eventy - Promora</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../images/logo.png" type="image/png" />
+</head>
+<body>
+
+    <!-- ====== REKLAMY (takie same) ====== -->
+    <div id="reklama-gora" class="reklama-top">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner.png" alt="Reklama górna" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-gora')">✕</button>
+    </div>
+
+    <div id="reklama-lewa" class="reklama-side left">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner1.png" alt="Reklama lewa" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-lewa')">✕</button>
+    </div>
+
+    <div id="reklama-prawa" class="reklama-side right">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner2.png" alt="Reklama prawa" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-prawa')">✕</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Logo Promora" />
+                <div class="logo-text">
+                    <h1>Promora</h1>
+                    <span>Serwer Reklamowy</span>
+                </div>
+            </div>
+            <nav>
+                <a href="../index.html">Strona główna</a>
+                <a href="o-nas.html">O nas</a>
+                <a href="regulamin.html">Regulamin</a>
+                <a href="eventy.html" class="active">Eventy</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+            <a href="https://discord.gg/f8qhJQSRA7" target="_blank" class="btn-join">
+                Dołącz do serwera ➜
+            </a>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h2>📅 Eventy</h2>
+                <p>Sprawdź co się u nas dzieje!</p>
+            </section>
+
+            <!-- ===== PRZYSZŁE EVENTY ===== -->
+            <section style="background: rgba(27, 22, 51, 0.7); padding: 30px; border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.15); margin-bottom: 30px;">
+                <h3 style="color: #8B5CF6; margin-bottom: 20px;">🔮 Nadchodzące eventy</h3>
+                <div class="events-list">
+                    <!-- EDYTUJ TUTAJ: Dodawaj/usuń eventy -->
+                    <div class="event-item">
+                        <span class="event-date">15.07.2026</span>
+                        <span class="event-name">Konkurs na najlepszy serwer</span>
+                        <span class="event-status upcoming">Już wkrótce</span>
+                    </div>
+                    <div class="event-item">
+                        <span class="event-date">20.07.2026</span>
+                        <span class="event-name">Wieczór gier</span>
+                        <span class="event-status upcoming">Już wkrótce</span>
+                    </div>
+                    <div class="event-item">
+                        <span class="event-date">25.07.2026</span>
+                        <span class="event-name">Meet & Greet z adminami</span>
+                        <span class="event-status upcoming">Już wkrótce</span>
+                    </div>
+                    <!-- KOPIUJ TEN BLOK I ZMIEŃ DANE -->
+                    <!--
+                    <div class="event-item">
+                        <span class="event-date">DD.MM.RRRR</span>
+                        <span class="event-name">Nazwa eventu</span>
+                        <span class="event-status upcoming">Już wkrótce</span>
+                    </div>
+                    -->
+                </div>
+            </section>
+
+            <!-- ===== AKTUALNE EVENTY ===== -->
+            <section style="background: rgba(27, 22, 51, 0.7); padding: 30px; border-radius: 15px; border: 1px solid rgba(244, 114, 182, 0.2); margin-bottom: 30px;">
+                <h3 style="color: #F472B6; margin-bottom: 20px;">🔥 Trwające eventy</h3>
+                <div class="events-list">
+                    <!-- EDYTUJ TUTAJ -->
+                    <div class="event-item">
+                        <span class="event-date">01-14.07.2026</span>
+                        <span class="event-name">Letnia promocja reklam</span>
+                        <span class="event-status active">Trwa!</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== PRZESZŁE EVENTY ===== -->
+            <section style="background: rgba(27, 22, 51, 0.7); padding: 30px; border-radius: 15px; border: 1px solid rgba(100, 100, 100, 0.2); margin-bottom: 40px;">
+                <h3 style="color: #888; margin-bottom: 20px;">📜 Zakończone eventy</h3>
+                <div class="events-list">
+                    <!-- EDYTUJ TUTAJ -->
+                    <div class="event-item">
+                        <span class="event-date">01.06.2026</span>
+                        <span class="event-name">Grand Opening serwera</span>
+                        <span class="event-status past">Zakończony</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Promora</h4>
+                    <p>Serwer Reklamowy dla każdego</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Linki</h4>
+                    <a href="../index.html">Strona główna</a>
+                    <a href="o-nas.html">O nas</a>
+                    <a href="regulamin.html">Regulamin</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>📩 Kontakt przez ticket na Discordzie</p>
+                    <a href="https://discord.gg/f8qhJQSRA7" target="_blank" class="btn-join-small">
+                        Dołącz do serwera
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Promora. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="reklama-dol" class="reklama-bottom">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner.png" alt="Reklama dolna" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-dol')">✕</button>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

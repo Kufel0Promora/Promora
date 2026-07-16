@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>O nas - Promora</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../images/logo.png" type="image/png" />
+</head>
+<body>
+
+    <!-- ====== REKLAMY (takie same jak na głównej) ====== -->
+    <div id="reklama-gora" class="reklama-top">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner.png" alt="Reklama górna" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-gora')">✕</button>
+    </div>
+
+    <div id="reklama-lewa" class="reklama-side left">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner1.png" alt="Reklama lewa" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-lewa')">✕</button>
+    </div>
+
+    <div id="reklama-prawa" class="reklama-side right">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner2.png" alt="Reklama prawa" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-prawa')">✕</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Logo Promora" />
+                <div class="logo-text">
+                    <h1>Promora</h1>
+                    <span>Serwer Reklamowy</span>
+                </div>
+            </div>
+            <nav>
+                <a href="../index.html">Strona główna</a>
+                <a href="o-nas.html" class="active">O nas</a>
+                <a href="regulamin.html">Regulamin</a>
+                <a href="eventy.html">Eventy</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+            <a href="https://discord.gg/f8qhJQSRA7" target="_blank" class="btn-join">
+                Dołącz do serwera ➜
+            </a>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h2>O nas</h2>
+                <p>Poznaj historię i misję Promora</p>
+            </section>
+
+            <section class="features" style="margin-bottom: 40px;">
+                <div style="background: rgba(27, 22, 51, 0.7); padding: 40px; border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <h3 style="color: #8B5CF6; font-size: 24px; margin-bottom: 20px;">Kim jesteśmy?</h3>
+                    <p style="color: #A78BFA; line-height: 1.8; font-size: 18px;">
+                        Promora to serwer Discord stworzony z myślą o wszystkich, którzy chcą wypromować swoje serwery.
+                        Jesteśmy społecznością, która pomaga małym serwerom znaleźć nowych członków.
+                    </p>
+                </div>
+            </section>
+
+            <section style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px;">
+                <div style="background: rgba(27, 22, 51, 0.7); padding: 30px; border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <h3 style="color: #8B5CF6; margin-bottom: 15px;">🎯 Nasza misja</h3>
+                    <p style="color: #A78BFA; line-height: 1.6;">
+                        Stworzyć przyjazne miejsce gdzie każdy serwer Discord może znaleźć swoje miejsce i rozwijać się.
+                    </p>
+                </div>
+                <div style="background: rgba(27, 22, 51, 0.7); padding: 30px; border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <h3 style="color: #8B5CF6; margin-bottom: 15px;">💎 Wartości</h3>
+                    <p style="color: #A78BFA; line-height: 1.6;">
+                        Szanujemy każdy serwer, pomagamy sobie nawzajem i tworzymy przyjazną atmosferę.
+                    </p>
+                </div>
+            </section>
+
+            <section style="background: rgba(27, 22, 51, 0.7); padding: 30px; border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.15); margin-bottom: 40px;">
+                <h3 style="color: #fff; margin-bottom: 20px;">👑 Administracja</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <div style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 48px;">👤</div>
+                        <p style="color: #fff; font-weight: bold;">Twoja nazwa</p>
+                        <p style="color: #A78BFA; font-size: 14px;">Założyciel</p>
+                    </div>
+                    <!-- Dodaj więcej adminów jeśli chcesz -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Promora</h4>
+                    <p>Serwer Reklamowy dla każdego</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Linki</h4>
+                    <a href="../index.html">Strona główna</a>
+                    <a href="o-nas.html">O nas</a>
+                    <a href="regulamin.html">Regulamin</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>📩 Kontakt przez ticket na Discordzie</p>
+                    <a href="https://discord.gg/f8qhJQSRA7" target="_blank" class="btn-join-small">
+                        Dołącz do serwera
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Promora. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="reklama-dol" class="reklama-bottom">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner.png" alt="Reklama dolna" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-dol')">✕</button>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

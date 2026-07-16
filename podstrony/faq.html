@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FAQ - Promora</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../images/logo.png" type="image/png" />
+</head>
+<body>
+
+    <!-- ====== REKLAMY ====== -->
+    <div id="reklama-gora" class="reklama-top">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner.png" alt="Reklama górna" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-gora')">✕</button>
+    </div>
+
+    <div id="reklama-lewa" class="reklama-side left">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner1.png" alt="Reklama lewa" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-lewa')">✕</button>
+    </div>
+
+    <div id="reklama-prawa" class="reklama-side right">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner2.png" alt="Reklama prawa" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-prawa')">✕</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Logo Promora" />
+                <div class="logo-text">
+                    <h1>Promora</h1>
+                    <span>Serwer Reklamowy</span>
+                </div>
+            </div>
+            <nav>
+                <a href="../index.html">Strona główna</a>
+                <a href="o-nas.html">O nas</a>
+                <a href="regulamin.html">Regulamin</a>
+                <a href="eventy.html">Eventy</a>
+                <a href="faq.html" class="active">FAQ</a>
+            </nav>
+            <a href="https://discord.gg/f8qhJQSRA7" target="_blank" class="btn-join">
+                Dołącz do serwera ➜
+            </a>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h2>❓ FAQ</h2>
+                <p>Najczęściej zadawane pytania</p>
+            </section>
+
+            <!-- ===== FAQ LISTA ===== -->
+            <section style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px;">
+
+                <!-- Pytanie 1 -->
+                <div style="background: rgba(27, 22, 51, 0.7); padding: 25px; border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <h3 style="color: #8B5CF6; font-size: 18px; margin-bottom: 10px;">❓ Jak mogę zareklamować swój serwer?</h3>
+                    <p style="color: #A78BFA; line-height: 1.6;">
+                        Wystarczy dołączyć do naszego serwera Discord i przejść na odpowiedni kanał do reklamy. 
+                        Każdy serwer może dodać swoją reklamę w dedykowanym miejscu.
+                    </p>
+                </div>
+
+                <!-- Pytanie 2 -->
+                <div style="background: rgba(27, 22, 51, 0.7); padding: 25px; border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <h3 style="color: #8B5CF6; font-size: 18px; margin-bottom: 10px;">❓ Czy reklama jest darmowa?</h3>
+                    <p style="color: #A78BFA; line-height: 1.6;">
+                        Tak! Reklama na Promora jest całkowicie darmowa. Chcemy pomagać małym serwerom w rozwoju.
+                    </p>
+                </div>
+
+                <!-- Pytanie 3 -->
+                <div style="background: rgba(27, 22, 51, 0.7); padding: 25px; border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <h3 style="color: #8B5CF6; font-size: 18px; margin-bottom: 10px;">❓ Jakie są zasady reklamy?</h3>
+                    <p style="color: #A78BFA; line-height: 1.6;">
+                        Wszystkie zasady znajdziesz w naszym <a href="regulamin.html" style="color: #8B5CF6;">regulaminie</a>. 
+                        Podstawowe zasady to: szacunek dla innych, brak spamowania i odpowiednie kanały.
+                    </p>
+                </div>
+
+                <!-- Pytanie 4 -->
+                <div style="background: rgba(27, 22, 51, 0.7); padding: 25px; border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <h3 style="color: #8B5CF6; font-size: 18px; margin-bottom: 10px;">❓ Czy mogę dostać pomoc w rozwoju serwera?</h3>
+                    <p style="color: #A78BFA; line-height: 1.6;">
+                        Oczywiście! Nasi admini i społeczność chętnie doradzą. Wystarczy napisać na odpowiednim kanale.
+                    </p>
+                </div>
+
+                <!-- Pytanie 5 - EDYTUJ I DODAWAJ KOLEJNE -->
+                <div style="background: rgba(27, 22, 51, 0.7); padding: 25px; border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <h3 style="color: #8B5CF6; font-size: 18px; margin-bottom: 10px;">❓ Jak skontaktować się z administracją?</h3>
+                    <p style="color: #A78BFA; line-height: 1.6;">
+                        Najlepiej przez ticket na naszym serwerze Discord. Admini odpowiadają w ciągu 24 godzin.
+                    </p>
+                </div>
+
+                <!-- KOPIUJ TEN BLOK ŻEBY DODAĆ NOWE PYTANIE -->
+                <!--
+                <div style="background: rgba(27, 22, 51, 0.7); padding: 25px; border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.15);">
+                    <h3 style="color: #8B5CF6; font-size: 18px; margin-bottom: 10px;">❓ Twoje pytanie</h3>
+                    <p style="color: #A78BFA; line-height: 1.6;">
+                        Twoja odpowiedź
+                    </p>
+                </div>
+                -->
+
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Promora</h4>
+                    <p>Serwer Reklamowy dla każdego</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Linki</h4>
+                    <a href="../index.html">Strona główna</a>
+                    <a href="o-nas.html">O nas</a>
+                    <a href="regulamin.html">Regulamin</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>📩 Kontakt przez ticket na Discordzie</p>
+                    <a href="https://discord.gg/f8qhJQSRA7" target="_blank" class="btn-join-small">
+                        Dołącz do serwera
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Promora. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="reklama-dol" class="reklama-bottom">
+        <a href="https://discord.gg/f8qhJQSRA7" target="_blank">
+            <img src="../images/baner.png" alt="Reklama dolna" />
+        </a>
+        <button class="close-reklama" onclick="zamknijReklame('reklama-dol')">✕</button>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
