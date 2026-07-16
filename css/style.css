@@ -7,11 +7,11 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0B081A; /* Bardzo ciemny fioletowy */
+    background: #0B081A;
     color: #E2D9F3;
     min-height: 100vh;
-    padding-top: 80px;  /* Miejsce na reklamę górną */
-    padding-bottom: 80px; /* Miejsce na reklamę dolną */
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 a {
@@ -19,7 +19,7 @@ a {
     color: inherit;
 }
 
-/* ===== REKLAMY (FIXED) ===== */
+/* ===== REKLAMY GÓRNA I DOLNA ===== */
 .reklama-top {
     position: fixed;
     top: 0;
@@ -31,8 +31,8 @@ a {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    border-bottom: 2px solid #8B5CF6;
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+    border-bottom: 3px solid #8B5CF6;
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.4);
 }
 
 .reklama-top img {
@@ -51,18 +51,12 @@ a {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    border-top: 2px solid #8B5CF6;
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+    border-top: 3px solid #8B5CF6;
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.4);
 }
 
-.reklama-side img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    /* OBRÓCENIE O 90 STOPNI - czytane od środka */
-    transform: rotate(90deg);
-    max-height: 400px;
+.reklama-bottom img {
+    height: 80px;
     object-fit: contain;
 }
 
@@ -81,7 +75,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 300px; /* dłuższe */
+    min-height: 350px;
 }
 
 .reklama-side.left {
@@ -95,7 +89,6 @@ a {
 .reklama-side a {
     display: block;
     width: 100%;
-    height: 100%;
 }
 
 .reklama-side img {
@@ -103,39 +96,15 @@ a {
     height: auto;
     border-radius: 8px;
     display: block;
-    /* OBRÓCENIE BANERA - czytany od środka */
-    transform: rotate(0deg);
-}
-
-/* Przycisk zamykania reklam */
-.close-reklama {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: none;
-    background: #8B5CF6;
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-}
-
-.close-reklama:hover {
-    background: #F472B6;
-    transform: scale(1.1);
+    max-height: 350px;
+    object-fit: contain;
 }
 
 /* ===== KONTENER ===== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 160px; /* Miejsce na reklamy boczne */
+    padding: 0 180px;
 }
 
 /* ===== NAGŁÓWEK ===== */
@@ -520,7 +489,7 @@ footer {
         padding: 0 20px;
     }
     .reklama-side {
-        display: none; /* Ukrywamy reklamy boczne na tabletach */
+        display: none;
     }
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -533,21 +502,21 @@ footer {
 /* Telefony */
 @media (max-width: 768px) {
     body {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     .reklama-top {
-        height: 50px;
+        height: 70px;
     }
     .reklama-top img {
-        height: 40px;
+        height: 55px;
     }
     .reklama-bottom {
-        height: 50px;
+        height: 70px;
     }
     .reklama-bottom img {
-        height: 40px;
+        height: 55px;
     }
 
     header {
@@ -622,13 +591,13 @@ footer {
 /* Bardzo małe telefony */
 @media (max-width: 480px) {
     .reklama-top, .reklama-bottom {
-        height: 40px;
+        height: 60px;
     }
     .reklama-top img, .reklama-bottom img {
-        height: 32px;
+        height: 45px;
     }
     body {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
 }
