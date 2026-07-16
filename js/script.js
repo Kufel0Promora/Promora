@@ -3,122 +3,107 @@
 //  PROMORA - Serwer Reklamowy Discord
 // ============================================
 
-// ===== REKLAMY - ZAWSZE WIDOCZNE =====
-// Funkcja zamykania reklam jest wyłączona - reklamy pozostają zawsze widoczne
+// ============================================
+//  1. ZMIANA MOTYWU (DARK/LIGHT)
+// ============================================
+
+// Funkcja przełączająca motyw
+function toggleTheme() {
+    const body = document.body;
+    const button = document.getElementById('theme-toggle');
+    
+    // Przełączamy klasę
+    body.classList.toggle('light-mode');
+    
+    // Zmieniamy ikonkę przycisku
+    if (body.classList.contains('light-mode')) {
+        button.textContent = '☀️';
+        localStorage.setItem('theme', 'light');
+    } else {
+        button.textContent = '🌙';
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// Funkcja ładująca zapisany motyw
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const button = document.getElementById('theme-toggle');
+    
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        if (button) button.textContent = '☀️';
+    } else {
+        document.body.classList.remove('light-mode');
+        if (button) button.textContent = '🌙';
+    }
+}
+
+// ============================================
+//  2. AKTYWNA NAWIGACJA
+// ============================================
+
+function setActiveNav() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const links = document.querySelectorAll('nav a');
+    
+    links.forEach(link => {
+        const href = link.getAttribute('href');
+        link.classList.remove('active');
+        
+        if (href === currentPage || 
+            (currentPage === '' && href === 'index.html') ||
+            (currentPage === 'index.html' && href === 'index.html') ||
+            (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// ============================================
+//  3. PŁYNNE PRZEWIJANIE
+// ============================================
+
+function smoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+}
+
+// ============================================
+//  4. REKLAMY - ZAWSZE WIDOCZNE
+// ============================================
+
 function zamknijReklame(id) {
     // Reklamy pozostają widoczne - nic nie robimy
     return;
 }
 
 // ============================================
-//  AKTYWNA NAWIGACJA - podświetlenie strony
+//  START - URUCHAMIANIE WSZYSTKIEGO
 // ============================================
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Załaduj motyw
+    loadTheme();
     
-    // Pobieramy nazwę aktualnej strony z URL
-    const currentPage = window.location.pathname.split('/').pop();
+    // Ustaw aktywną nawigację
+    setActiveNav();
     
-    // Znajdujemy wszystkie linki w nawigacji
-    const links = document.querySelectorAll('nav a');
+    // Płynne przewijanie
+    smoothScroll();
     
-    links.forEach(link => {
-        // Pobieramy href z linku
-        const href = link.getAttribute('href');
-        
-        // Sprawdzamy czy link pasuje do aktualnej strony
-        // Dla strony głównej (index.html) lub gdy currentPage jest puste
-        if (href === currentPage || 
-            (currentPage === '' && href === 'index.html') ||
-            (currentPage === 'index.html' && href === 'index.html') ||
-            (currentPage === '' && href === 'index.html')) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
+    console.log('🚀 Promora - strona załadowana pomyślnie!');
 });
-
-// ============================================
-//  PŁYNNE PRZEWIJANIE - dla kotwic (#)
-// ============================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        
-        // Pomijamy puste kotwice
-        if (href !== '#') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }
-    });
-});
-
-// ============================================
-//  OPCJONALNIE: Efekt pojawiania się elementów
-//  przy przewijaniu (dla lepszego wyglądu)
-// ============================================
-// Ta funkcja sprawdza czy element jest widoczny na ekranie
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Funkcja dodająca klasę 'visible' do widocznych elementów
-function handleScrollAnimations() {
-    const elements = document.querySelectorAll('.feature-card, .event-item, .stat-item');
-    
-    elements.forEach(el => {
-        if (isElementInViewport(el)) {
-            el.classList.add('visible');
-        }
-    });
-}
-
-// Nasłuchiwanie przewijania (opcjonalne)
-// Odkomentuj poniższe linie jeśli chcesz używać animacji
-/*
-window.addEventListener('scroll', handleScrollAnimations);
-window.addEventListener('load', handleScrollAnimations);
-*/
-
-// ============================================
-//  OPCJONALNIE: Licznik odwiedzin (bardzo prosty)
-//  Używa localStorage do zliczania
-// ============================================
-// Odkomentuj poniższy kod jeśli chcesz licznik
-/*
-function countVisit() {
-    let visits = localStorage.getItem('promora_visits');
-    if (visits === null) {
-        visits = 1;
-    } else {
-        visits = parseInt(visits) + 1;
-    }
-    localStorage.setItem('promora_visits', visits);
-    
-    // Wyświetl licznik jeśli istnieje element o id 'visit-counter'
-    const counterElement = document.getElementById('visit-counter');
-    if (counterElement) {
-        counterElement.textContent = visits;
-    }
-}
-
-// Wywołaj przy załadowaniu strony
-document.addEventListener('DOMContentLoaded', countVisit);
-*/
-
-// ============================================
-//  KONIEC PLIKU
-// ============================================
-console.log('🚀 Promora - strona załadowana pomyślnie!');
