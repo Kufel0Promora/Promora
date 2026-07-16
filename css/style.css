@@ -25,9 +25,10 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 120px;
+    height: 110px;
     background: #1a1533;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -36,7 +37,7 @@ a {
 }
 
 .reklama-top img {
-    height: 100px;
+    height: 65px;
     object-fit: contain;
 }
 
@@ -45,9 +46,10 @@ a {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 120px;
+    height: 110px;
     background: #1a1533;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -56,8 +58,18 @@ a {
 }
 
 .reklama-bottom img {
-    height: 100px;
+    height: 65px;
     object-fit: contain;
+}
+
+/* ===== ETYKIETA REKLAMY ===== */
+.reklama-etykieta {
+    font-size: 10px;
+    color: #8B5CF6;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    font-weight: bold;
 }
 
 /* ===== REKLAMY BOCZNE ===== */
@@ -73,6 +85,7 @@ a {
     padding: 10px 8px;
     box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 250px;
@@ -96,7 +109,7 @@ a {
     height: auto;
     border-radius: 8px;
     display: block;
-    max-height: 250px;
+    max-height: 200px;
     object-fit: contain;
 }
 
@@ -648,6 +661,10 @@ body.light-mode .reklama-side {
     background: rgba(255, 255, 255, 0.95);
 }
 
+body.light-mode .reklama-etykieta {
+    color: #6D28D9;
+}
+
 body.light-mode .btn-join {
     background: linear-gradient(135deg, #6D28D9, #4A1A8A);
 }
@@ -725,16 +742,16 @@ body.light-mode .view-all a:hover {
     }
 
     .reklama-top {
-        height: 70px;
+        height: 80px;
     }
     .reklama-top img {
-        height: 55px;
+        height: 45px;
     }
     .reklama-bottom {
-        height: 70px;
+        height: 80px;
     }
     .reklama-bottom img {
-        height: 55px;
+        height: 45px;
     }
 
     header {
@@ -824,10 +841,10 @@ body.light-mode .view-all a:hover {
 /* Bardzo małe telefony */
 @media (max-width: 480px) {
     .reklama-top, .reklama-bottom {
-        height: 60px;
+        height: 70px;
     }
     .reklama-top img, .reklama-bottom img {
-        height: 45px;
+        height: 38px;
     }
     body {
         padding-top: 70px;
